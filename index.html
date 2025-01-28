@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Other Links</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .link-box {
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid #6f00ff;
+            border-radius: 10px;
+            text-align: center;
+            overflow: hidden;
+            padding: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .link-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .link-box h2 {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+        }
+
+        .link-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,12 +51,28 @@
     <main>
         <section>
             <h1>Connect with Me</h1>
-            <p>Check out my other online presences below:</p>
-            <ul>
-                <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-                <li><a href="https://www.printables.com" target="_blank">Printables</a></li>
-                <li><a href="https://example.com" target="_blank">Other Projects</a></li>
-            </ul>
+            <div class="links-grid">
+                <div class="link-box" onclick="window.open('https://www.printables.com', '_blank');">
+                    <img src="placeholder.jpg" alt="Printables">
+                    <h2>Printables</h2>
+                </div>
+                <div class="link-box" onclick="window.open('https://www.youtube.com', '_blank');">
+                    <img src="placeholder.jpg" alt="YouTube">
+                    <h2>YouTube</h2>
+                </div>
+                <div class="link-box" onclick="window.open('https://github.com', '_blank');">
+                    <img src="placeholder.jpg" alt="GitHub">
+                    <h2>GitHub</h2>
+                </div>
+                <div class="link-box" onclick="window.open('https://www.instagram.com', '_blank');">
+                    <img src="placeholder.jpg" alt="Instagram">
+                    <h2>Instagram</h2>
+                </div>
+                <div class="link-box" onclick="window.open('#', '_blank');">
+                    <img src="placeholder.jpg" alt="Other Projects">
+                    <h2>Other</h2>
+                </div>
+            </div>
         </section>
     </main>
 
