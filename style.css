@@ -74,11 +74,16 @@ main {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+.nav-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .nav-box h2 {
@@ -89,6 +94,31 @@ main {
 .nav-box p {
     font-size: 0.875rem;
     color: #ccc;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .nav-box {
+        padding: 0.75rem;
+    }
+
+    .nav-box img {
+        max-width: 80%;
+        margin-bottom: 0.75rem;
+    }
+
+    .nav-box h2 {
+        font-size: 1.1rem;
+    }
+
+    .nav-box p {
+        font-size: 0.75rem;
+    }
+}
+
+.nav-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 600px) {
