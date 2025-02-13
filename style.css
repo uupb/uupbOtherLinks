@@ -1,34 +1,28 @@
 /* Base styling */
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header, main, footer */
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #fff;
-    min-height: 100vh
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1; 
-}
 
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
     margin: 0;
+    padding: 1rem;
 }
 
 
@@ -44,20 +38,18 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 90%;
     max-width: 1200px;
-    margin-top: 2rem;
+    margin-top: 2rem auto;
     overflow-y: auto;
 }
 
 footer {
-    font-size: 0.875rem;
     background-color: rgba(0, 0, 0, 0.7);
-    background-image: url('svg/sw1.svg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: url('svg/sw1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     text-align: center;
-    margin-top: auto; 
-    max-width: 100%;
+    width: 100%;
     padding: 5rem;
 }
 
@@ -146,6 +138,18 @@ footer {
         font-size: 0.75rem;
     }
 }
+
+@media (min-width: 1024px) {
+    .links-grid {
+      grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 20vw, 250px), 1fr));
+      gap: 2rem;
+    }
+    
+    .nav-box {
+      padding: 2rem;
+      font-size: 1.5rem;
+    }
+  }
 
 @media (max-width: 2400px) {
     header img {
