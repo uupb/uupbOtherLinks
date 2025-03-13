@@ -14,7 +14,7 @@ html, body {
 header {
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
-    width: 100%;
+    width: 90%;
     padding: 1rem;
     top: 0;
     z-index: 1000;
@@ -42,8 +42,9 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    height: 90%;
+    max-width: 100% auto;
     margin: 0 auto;
     justify-items: center;
     padding: 1rem;
@@ -63,10 +64,11 @@ main {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    max-height: 250px;
 }
 
 .nav-box img {
-    max-width: 100%;
+    max-width: 75%;
     height: auto;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -89,7 +91,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    width: 100%;
+    width: 90%;
     padding: 2rem;
     margin-top: auto;
 }
