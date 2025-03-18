@@ -15,7 +15,7 @@ html, body {
 /* Header Styles */
 header {
     width: 90%;
-    padding: 1rem;
+    padding: 1rem 1rem;
     max-height: 30%;
     background-color: rgba(0, 0, 0, 0.7);
     text-align: center;
@@ -33,8 +33,8 @@ header img {
 
 /* Main Content Styles */
 main {
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: max-content;
     height: auto;
     margin: 0 auto;
     padding: 1rem;
@@ -61,10 +61,10 @@ main {
 .nav-box {
     position: relative;
     padding: 1rem;
-    max-height: 250px;
+    max-height: 75%;
     background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid #6f00ff;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,8 +78,8 @@ main {
 .nav-box img {
     max-width: 75%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    border-radius: 3px;
+    margin-bottom: .25rem;
 }
 
 .nav-box h2 {
@@ -109,6 +109,10 @@ footer {
 
 
 /* Media Queries */
+@media (max-width: 200px) {
+    
+}
+
 @media (max-width: 600px) {
     header {
         font-size: 1.25rem;
